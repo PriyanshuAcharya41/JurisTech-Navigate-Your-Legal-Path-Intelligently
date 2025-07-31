@@ -1,0 +1,24 @@
+# Use the official Python 3.11 slim image as a base
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy only the requirements file first to leverage Docker's caching mechanism
+COPY requirements.txt .
+
+# Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of your application's code into the container
+COPY . .
+
+# IMPORTANT: Build the vector database inside the container during the image build
+RUN python ipc_vectordb_builder.py
+
+# Expose the port that the API will run on
+EXPOSE 8000
+
+# The command to start the FastAPI server when the container launches
+# --host 0.0.0.0 makes it accessible from outside the container
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]

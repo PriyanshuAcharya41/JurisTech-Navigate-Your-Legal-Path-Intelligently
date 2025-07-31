@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # This securely passes your API keys from the .env file to the container
+
+  frontend:
+    build:
+      context: ./frontend # The context is the frontend sub-directory
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map your local port 3000 to the container's port 80
+    depends_on:
+      - backend # This tells Docker to start the backend before the frontend

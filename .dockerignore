@@ -1,0 +1,21 @@
+# Git files
+.git
+.gitignore
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local secrets file
+.env
+
+# Local vector database (it will be built inside the container)
+ipc_vectordb/
+
+# Node.js dependencies (they will be installed inside the container)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
