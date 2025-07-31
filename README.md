@@ -8,7 +8,7 @@
 
 **JurisTech** is an advanced AI-powered legal assistant designed to demystify Indian law. It offers two distinct user interfaces: a full-featured **React application** and a simple, rapid-prototype **Streamlit application**. By leveraging a multi-agent system, it provides users with comprehensive legal analysis, identifies relevant IPC sections, researches precedents, and drafts formal legal documents from a simple, natural language description.
 
-[!error.png)
+!(error.png)
 
 ---
 
