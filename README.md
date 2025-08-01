@@ -43,7 +43,7 @@ JurisTech supports two distinct operational flows depending on the chosen fronte
 | (streamlit_app.py)  |      | (Simple Text Task)  |
 +---------------------+      +---------------------+
 ```
-
+![view](./result.png)
 ---
 
 ## 💻 Tech Stack
