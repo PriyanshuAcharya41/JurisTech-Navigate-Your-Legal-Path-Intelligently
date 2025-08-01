@@ -230,8 +230,8 @@ function App() {
       </div>
       <div className="main-container">
         <header className="hero-section">
-          <div className="hero-icon"><Scale size={40} /></div>
-          <h1 className="hero-title">AI Legal Assistant</h1>
+          <div className="hero-icon"><Scale size={30} /></div>
+          <h1 className="hero-title">JurisTech: Navigate Your Legal Path</h1>
           <p className="hero-subtitle">
             Get comprehensive legal analysis powered by advanced AI agents. 
             <span className="highlight-text"> Streamline your legal research</span> with intelligent automation.
